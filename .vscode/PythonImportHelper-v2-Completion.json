@@ -9,6 +9,22 @@
     },
     {
         "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter.ttk",
+        "description": "tkinter.ttk",
+        "isExtraImport": true,
+        "detail": "tkinter.ttk",
+        "documentation": {}
+    },
+    {
+        "label": "*",
         "importPath": "tkinter.ttk",
         "description": "tkinter.ttk",
         "isExtraImport": true,
@@ -94,6 +110,78 @@
         "description": "gui-side.main",
         "peekOfCode": "stopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
         "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "startServer",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(master, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)\ndef stopServer():\n    stopServerButton.place_forget()\n    startServerButton.place(x=5,y=40)\n    serverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "stopServer",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def stopServer():\n    stopServerButton.place_forget()\n    startServerButton.place(x=5,y=40)\n    serverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)\n# ENTRIES\nportEntry = Entry()\nportEntry.insert(0, \"8080\")\nportEntry.place(x=55,y=10)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "master",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "master = Tk()\nmaster.geometry(\"250x100\")\nmaster.title(\"Coords2GPX\")\nmaster.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(master, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "portEntry",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "portEntry = Entry()\nportEntry.insert(0, \"8080\")\nportEntry.place(x=55,y=10)\n#LABELS\nportEntryLabel = Label(master, text=\"Puerto: \")\nportEntryLabel.place(x=5,y=10)\nserverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(master, text =\"Iniciar\", command = startServer)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "portEntryLabel",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "portEntryLabel = Label(master, text=\"Puerto: \")\nportEntryLabel.place(x=5,y=10)\nserverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(master, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "serverStatusLabel",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "serverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(master, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "startServerButton",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "startServerButton = Button(master, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "stopServerButton",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "stopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "detail": "main",
         "documentation": {}
     }
 ]
