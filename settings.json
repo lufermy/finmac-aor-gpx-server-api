@@ -1,0 +1,6 @@
+{
+  "username": "John",
+  "servername": "localhost",
+  "database": "database",
+  "defaultport": 8180
+}

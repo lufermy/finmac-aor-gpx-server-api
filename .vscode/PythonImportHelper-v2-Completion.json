@@ -25,11 +25,20 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "startServer",
         "kind": 2,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "def startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(master, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)\ndef stopServer():\n    stopServerButton.place_forget()\n    startServerButton.place(x=5,y=40)\n    serverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')",
+        "peekOfCode": "def startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(root, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)\ndef stopServer():\n    stopServerButton.place_forget()\n    startServerButton.place(x=5,y=40)\n    serverStatusLabel = Label(root, text =\"Servidor detenido.\", foreground='#FF0000')",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -38,16 +47,70 @@
         "kind": 2,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "def stopServer():\n    stopServerButton.place_forget()\n    startServerButton.place(x=5,y=40)\n    serverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)\n# ENTRIES\nportEntry = Entry()\nportEntry.insert(0, \"8080\")\nportEntry.place(x=55,y=10)",
+        "peekOfCode": "def stopServer():\n    stopServerButton.place_forget()\n    startServerButton.place(x=5,y=40)\n    serverStatusLabel = Label(root, text =\"Servidor detenido.\", foreground='#FF0000')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)\n# ENTRIES\nportEntry = Entry()\nportEntry.insert(0, str(settings_defaultport))\nportEntry.place(x=55,y=10)",
         "detail": "gui-side.main",
         "documentation": {}
     },
     {
-        "label": "master",
+        "label": "settingsfile",
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "master = Tk()\nmaster.geometry(\"250x100\")\nmaster.title(\"Coords2GPX\")\nmaster.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(master, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)",
+        "peekOfCode": "settingsfile = open('./settings.json')\nsettingsdata = json.load(settingsfile)\nsettings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")",
+        "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "settingsdata",
+        "kind": 5,
+        "importPath": "gui-side.main",
+        "description": "gui-side.main",
+        "peekOfCode": "settingsdata = json.load(settingsfile)\nsettings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)",
+        "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "settings_username",
+        "kind": 5,
+        "importPath": "gui-side.main",
+        "description": "gui-side.main",
+        "peekOfCode": "settings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():",
+        "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "settings_servername",
+        "kind": 5,
+        "importPath": "gui-side.main",
+        "description": "gui-side.main",
+        "peekOfCode": "settings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()",
+        "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "settings_database",
+        "kind": 5,
+        "importPath": "gui-side.main",
+        "description": "gui-side.main",
+        "peekOfCode": "settings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)",
+        "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "settings_defaultport",
+        "kind": 5,
+        "importPath": "gui-side.main",
+        "description": "gui-side.main",
+        "peekOfCode": "settings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(root, text =\"Servidor iniciado.\", foreground='#00FF00')",
+        "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "gui-side.main",
+        "description": "gui-side.main",
+        "peekOfCode": "root = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(root, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -56,7 +119,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "portEntry = Entry()\nportEntry.insert(0, \"8080\")\nportEntry.place(x=55,y=10)\n#LABELS\nportEntryLabel = Label(master, text=\"Puerto: \")\nportEntryLabel.place(x=5,y=10)\nserverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(master, text =\"Iniciar\", command = startServer)",
+        "peekOfCode": "portEntry = Entry()\nportEntry.insert(0, str(settings_defaultport))\nportEntry.place(x=55,y=10)\n#LABELS\nportEntryLabel = Label(root, text=\"Puerto: \")\nportEntryLabel.place(x=5,y=10)\nserverStatusLabel = Label(root, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(root, text =\"Iniciar\", command = startServer)",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -65,7 +128,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "portEntryLabel = Label(master, text=\"Puerto: \")\nportEntryLabel.place(x=5,y=10)\nserverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(master, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "peekOfCode": "portEntryLabel = Label(root, text=\"Puerto: \")\nportEntryLabel.place(x=5,y=10)\nserverStatusLabel = Label(root, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(root, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(root, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -74,7 +137,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "serverStatusLabel = Label(master, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(master, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "peekOfCode": "serverStatusLabel = Label(root, text =\"Servidor detenido.\", foreground='#FF0000')\nserverStatusLabel.place(x=5,y=70)\n#BUTTONS\nstartServerButton = Button(root, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(root, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -83,7 +146,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "startServerButton = Button(master, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "peekOfCode": "startServerButton = Button(root, text =\"Iniciar\", command = startServer)\nstopServerButton = Button(root, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -92,8 +155,26 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "stopServerButton = Button(master, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
+        "peekOfCode": "stopServerButton = Button(root, text =\"Detener\", command = stopServer)\nstartServerButton.place(x=5,y=40)\nmainloop()",
         "detail": "gui-side.main",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "gui-side.test",
+        "description": "gui-side.test",
+        "peekOfCode": "f = open('./settings.json')\ndata = json.load(f)\nprint (data[\"username\"])\n# Closing file\nf.close()",
+        "detail": "gui-side.test",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "gui-side.test",
+        "description": "gui-side.test",
+        "peekOfCode": "data = json.load(f)\nprint (data[\"username\"])\n# Closing file\nf.close()",
+        "detail": "gui-side.test",
         "documentation": {}
     }
 ]
