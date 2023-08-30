@@ -56,7 +56,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "settingsfile = open('./settings.json')\nsettingsdata = json.load(settingsfile)\nsettings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")",
+        "peekOfCode": "settingsfile = open('./settings.json')\nsettingsdata = json.load(settingsfile)\nsettings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot=Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -65,7 +65,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "settingsdata = json.load(settingsfile)\nsettings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)",
+        "peekOfCode": "settingsdata = json.load(settingsfile)\nsettings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot=Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -74,7 +74,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "settings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():",
+        "peekOfCode": "settings_username = settingsdata[\"username\"]\nsettings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot=Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -83,7 +83,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "settings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()",
+        "peekOfCode": "settings_servername = settingsdata[\"servername\"]\nsettings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot=Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -92,7 +92,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "settings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)",
+        "peekOfCode": "settings_database = settingsdata[\"database\"]\nsettings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot=Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)",
         "detail": "gui-side.main",
         "documentation": {}
     },
@@ -101,16 +101,7 @@
         "kind": 5,
         "importPath": "gui-side.main",
         "description": "gui-side.main",
-        "peekOfCode": "settings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(root, text =\"Servidor iniciado.\", foreground='#00FF00')",
-        "detail": "gui-side.main",
-        "documentation": {}
-    },
-    {
-        "label": "root",
-        "kind": 5,
-        "importPath": "gui-side.main",
-        "description": "gui-side.main",
-        "peekOfCode": "root = Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(root, text =\"Servidor iniciado.\", foreground='#00FF00')\n    serverStatusLabel.place_forget()\n    serverStatusLabel.place(x=5,y=70)",
+        "peekOfCode": "settings_defaultport = settingsdata[\"defaultport\"]\nsettingsfile.close()\nroot=Tk()\nroot.geometry(\"250x100\")\nroot.title(\"Coords2GPX\")\nroot.iconbitmap(sys.executable)\ndef startServer():\n    startServerButton.place_forget()\n    stopServerButton.place(x=5,y=40)\n    serverStatusLabel=Label(root, text =\"Servidor iniciado.\", foreground='#00FF00')",
         "detail": "gui-side.main",
         "documentation": {}
     },

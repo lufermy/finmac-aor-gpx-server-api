@@ -14,7 +14,7 @@ settingsfile.close()
 
 
 
-root = Tk()
+root=Tk()
 root.geometry("250x100")
 root.title("Coords2GPX")
 root.iconbitmap(sys.executable)
