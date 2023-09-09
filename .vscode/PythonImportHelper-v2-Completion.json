@@ -34,6 +34,15 @@
         "documentation": {}
     },
     {
+        "label": "pyodbc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyodbc",
+        "description": "pyodbc",
+        "detail": "pyodbc",
+        "documentation": {}
+    },
+    {
         "label": "startServer",
         "kind": 2,
         "importPath": "gui-side.main",
@@ -151,20 +160,29 @@
         "documentation": {}
     },
     {
-        "label": "f",
+        "label": "cnxn",
         "kind": 5,
         "importPath": "gui-side.test",
         "description": "gui-side.test",
-        "peekOfCode": "f = open('./settings.json')\ndata = json.load(f)\nprint (data[\"username\"])\n# Closing file\nf.close()",
+        "peekOfCode": "cnxn = pyodbc.connect(DRIVER='{ODBC Driver 18 for SQL Server}',\n                      Server='188.165.239.21',\n                      Database='AOR',\n                      Port='1433',\n                      UID='userAOR',\n                      PWD='AORAOR01*',\n                      TrustServerCertificate='yes')\ncursor = cnxn.cursor()\ncursor.execute(\"SELECT * FROM dbo.Tokens\") \nrow = cursor.fetchone() ",
         "detail": "gui-side.test",
         "documentation": {}
     },
     {
-        "label": "data",
+        "label": "cursor",
         "kind": 5,
         "importPath": "gui-side.test",
         "description": "gui-side.test",
-        "peekOfCode": "data = json.load(f)\nprint (data[\"username\"])\n# Closing file\nf.close()",
+        "peekOfCode": "cursor = cnxn.cursor()\ncursor.execute(\"SELECT * FROM dbo.Tokens\") \nrow = cursor.fetchone() \nwhile row:\n    print (row) \n    row = cursor.fetchone()",
+        "detail": "gui-side.test",
+        "documentation": {}
+    },
+    {
+        "label": "row",
+        "kind": 5,
+        "importPath": "gui-side.test",
+        "description": "gui-side.test",
+        "peekOfCode": "row = cursor.fetchone() \nwhile row:\n    print (row) \n    row = cursor.fetchone()",
         "detail": "gui-side.test",
         "documentation": {}
     }
