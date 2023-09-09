@@ -2,11 +2,11 @@
 import pyodbc 
 print(pyodbc.drivers())  
 cnxn = pyodbc.connect(DRIVER='{ODBC Driver 18 for SQL Server}',
-                      Server='188.165.239.21',
-                      Database='AOR',
-                      Port='1433',
-                      UID='userAOR',
-                      PWD='AORAOR01*',
+                      Server='',
+                      Database='',
+                      Port='',
+                      UID='',
+                      PWD='*',
                       TrustServerCertificate='yes')
 
 cursor = cnxn.cursor()
